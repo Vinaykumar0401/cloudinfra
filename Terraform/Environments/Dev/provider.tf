@@ -3,8 +3,7 @@ terraform {
     bucket         = "prod-e-cart-terraform-state"
     key            = "Terraform/dev/terraform.tfstate"
     region         = "ap-southeast-2"
-    dynamodb_table = "prod-e-cart-terraform-locks"
-    encrypt        = true
+    use_lockfile     = true
   }
 
   required_providers {
